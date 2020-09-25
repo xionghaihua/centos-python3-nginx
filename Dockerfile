@@ -6,7 +6,7 @@ LABEL maintainer='xhaihua xionghaihua@distrii.com'
 #设置环境变量
 
 ENV  LANG en_US.UTF-8 
-ENV  LC_ALL en_us.UTF-8 
+ENV  LC_ALL en_US.UTF-8
 ENV  LANGUAGE en_US.UTF-8
 
 
