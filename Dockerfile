@@ -5,14 +5,17 @@ LABEL maintainer='xhaihua xionghaihua@distrii.com'
 
 #设置环境变量
 
-ENV  LANG en_US.UTF-8 \
-     LC_ALL en_us.UTF-8
+ENV  LANG en_US.UTF-8 
+ENV  LC_ALL en_us.UTF-8 
+ENV  LANGUAGE en_US.UTF-8
+
 
 #安装python环境
 
 RUN  curl -so /etc/yum.repos.d/Centos-7.repo http://mirrors.aliyun.com/repo/Centos-7.repo \
      && yum -y install python36 python3-devel openssl-devel gcc gcc-c++  pcre-devel zlib-devel make net-tools vim \
-     && yum clean all
+     && yum clean all  、
+     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 #安装nginx
 
